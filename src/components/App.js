@@ -1,5 +1,5 @@
 import { Profile } from './ProfileCard/Profile';
-import user from '../user.json';
+import user from '../data/user.json';
 
 export const App = () => {
   return (
