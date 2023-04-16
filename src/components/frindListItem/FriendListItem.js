@@ -1,11 +1,23 @@
+import clsx from 'clsx';
+import css from './FriendListItem.module.css';
 import PropTypes from 'prop-types';
 
-export const FriendListItem = ({ avatarUrl, name, IsOnline }) => {
+export const FriendListItem = ({ avatarUrl, name, isOnline }) => {
   return (
     <>
-      <span className="status"></span>
-      <img className="avatar" src={avatarUrl} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <span
+        className={clsx(css.status, {
+          [css.isOnline]: isOnline,
+          [css.isOffline]: !isOnline,
+        })}
+      ></span>
+      <img
+        className={css.avatar}
+        src={avatarUrl}
+        alt="User avatar"
+        width="48"
+      />
+      <p className={css.name}>{name}</p>
     </>
   );
 };
@@ -13,5 +25,5 @@ export const FriendListItem = ({ avatarUrl, name, IsOnline }) => {
 FriendListItem.propTypes = {
   avatarUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  status: PropTypes.bool.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
