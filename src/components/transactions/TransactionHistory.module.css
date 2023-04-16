@@ -17,7 +17,7 @@
 
 .transactionHistory th,
 .transactionHistory td {
-  padding: 8px;
+  padding: 8px 20px;
 }
 
 .transactionHistory tbody {
@@ -27,4 +27,8 @@
 
 tr:nth-child(even) {
   background-color: #ffffff;
+}
+
+td:first-child {
+  text-align: left;
 }
