@@ -1,3 +1,4 @@
+import css from './App.module.css';
 import { Profile } from './profile/Profile';
 import { Statistics } from './statistics/Statistics';
 import { FrindList } from './friendList/FriendList';
@@ -9,7 +10,7 @@ import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
-    <div>
+    <div className={css.container}>
       {/* профіль користувача */}
       <Profile
         username={user.username}
@@ -23,7 +24,7 @@ export const App = () => {
       {/* список друзів */}
       <FrindList items={friends} />
       {/* історія транзакцій */}
-      <TransactionHistory items={transactions} />;
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
