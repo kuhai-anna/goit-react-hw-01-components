@@ -1,3 +1,5 @@
+import css from './Profile.module.css';
+
 import PropTypes from 'prop-types';
 
 export const Profile = ({
@@ -8,26 +10,32 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+    <div className={css.profile}>
+      <div className={css.description}>
+        <img src={avatar} alt="User avatar" className={css.avatar} />
+        <p className={css.name}>{username}</p>
+        <p className={css.tag}>@{tag}</p>
+        <p className={css.location}>{location}</p>
       </div>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
+      <ul className={css.stats}>
+        <li className={css.statsItem}>
+          <span className={css.label}>Followers</span>
+          <span className={css.quantity}>
+            {followers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          </span>
         </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
+        <li className={css.statsItem}>
+          <span className={css.label}>Views</span>
+          <span className={css.quantity}>
+            {views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          </span>
         </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
+        <li className={css.statsItem}>
+          <span className={css.label}>Likes</span>
+          <span className={css.quantity}>
+            {likes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          </span>
         </li>
       </ul>
     </div>
