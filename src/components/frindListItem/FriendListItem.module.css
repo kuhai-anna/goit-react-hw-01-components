@@ -1,0 +1,25 @@
+.status {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  background-color: #e7e7e7;
+}
+
+.isOnline {
+  background-color: #02ad2d;
+}
+
+.isOffline {
+  background-color: #c90202;
+}
+
+.avatar {
+  border-radius: 4px;
+  background-color: #e7e7e7;
+}
+
+.name {
+  font-weight: 500;
+}
