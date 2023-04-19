@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+import {
+  Card,
+  DescriptionWrap,
+  StatsList,
+  StatsItem,
+  StatsLabel,
+  UserAvatar,
+  UserLocation,
+  UserName,
+  UserTag,
+  StatsQuantity,
+} from './Profile.styled';
 
 export const Profile = ({
   username,
@@ -9,35 +20,35 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <Card>
+      <DescriptionWrap>
+        <UserAvatar src={avatar} alt="User avatar" />
+        <UserName>{username}</UserName>
+        <UserTag>@{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
+      </DescriptionWrap>
 
-      <ul className={css.stats}>
-        <li className={css.statsItem}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>
+      <StatsList>
+        <StatsItem>
+          <StatsLabel>Followers</StatsLabel>
+          <StatsQuantity>
             {followers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-          </span>
-        </li>
-        <li className={css.statsItem}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>
+          </StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Views</StatsLabel>
+          <StatsQuantity>
             {views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-          </span>
-        </li>
-        <li className={css.statsItem}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>
+          </StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Likes</StatsLabel>
+          <StatsQuantity>
             {likes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-          </span>
-        </li>
-      </ul>
-    </div>
+          </StatsQuantity>
+        </StatsItem>
+      </StatsList>
+    </Card>
   );
 };
 
