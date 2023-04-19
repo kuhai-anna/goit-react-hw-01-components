@@ -1,4 +1,5 @@
-import css from 'components/App.module.css';
+// import css from 'components/App.module.css';
+import { Container } from 'components/App.styled';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
 import { FrindList } from 'components/FriendList/FriendList';
@@ -10,7 +11,7 @@ import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <div className={css.container}>
+    <Container>
       {/* профіль користувача */}
       <Profile
         username={user.username}
@@ -25,6 +26,6 @@ export const App = () => {
       <FrindList items={friends} />
       {/* історія транзакцій */}
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 };
