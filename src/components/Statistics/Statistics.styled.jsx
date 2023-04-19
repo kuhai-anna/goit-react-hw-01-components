@@ -1,8 +1,10 @@
-.statistics {
-  padding-top: 15px;
-}
+import styled from '@emotion/styled';
 
-.title {
+export const UploadStatsSection = styled.section`
+  padding-top: 15px;
+`;
+
+export const SectionTitle = styled.h2`
   margin-bottom: 15px;
   width: 320px;
   margin: 0 auto;
@@ -13,9 +15,9 @@
 
   text-align: center;
   font-size: 20px;
-}
+`;
 
-.statList {
+export const UploadStatsList = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,9 +28,9 @@
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+`;
 
-.item {
+export const UploadStatsItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,27 +38,27 @@
   width: calc(100% / 5);
 
   background-color: #e7e7e7;
-}
 
-.item:not(:last-child) {
-  border-right: 1px solid #c9c8c8;
-}
+  :first-child {
+    border-radius: 0 0 0 4px;
+  }
 
-.item:first-child {
-  border-radius: 0 0 0 4px;
-}
+  last-child {
+    border-radius: 0 0 4px 0;
+  }
 
-.item:last-child {
-  border-radius: 0 0 4px 0;
-}
+  :not(:last-child) {
+    border-right: 1px solid #c9c8c8;
+  }
+`;
 
-.label {
+export const StatsLabel = styled.span`
   font-size: 14px;
-}
+`;
 
-.percentage {
+export const StatsPercentage = styled.span`
   margin-top: 8px;
 
   font-size: 14px;
   font-weight: 700;
-}
+`;
