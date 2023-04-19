@@ -1,4 +1,3 @@
-// import css from 'components/App.module.css';
 import { Container } from 'components/App.styled';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
