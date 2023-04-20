@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FriendListItem } from 'components/FrindListItem/FriendListItem';
 import { Friends } from './FriendList.styled';
 
-export const FrindList = ({ items }) => {
+export const FriendList = ({ items }) => {
   return (
     <Friends>
       {items.map(({ id, avatar, name, isOnline }) => (
@@ -17,7 +17,7 @@ export const FrindList = ({ items }) => {
   );
 };
 
-FrindList.prototype = {
+FriendList.prototype = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.number.isRequired,
