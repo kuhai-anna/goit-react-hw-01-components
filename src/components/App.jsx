@@ -1,7 +1,7 @@
 import { Container } from 'components/App.styled';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
-import { FrindList } from 'components/FriendList/FriendList';
+import { FriendList } from 'components/FriendList/FriendList';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 import user from 'data/user.json';
 import data from 'data/data.json';
@@ -22,7 +22,7 @@ export const App = () => {
       {/* статистика завантажень */}
       <Statistics title="Upload stats" stats={data} />
       {/* список друзів */}
-      <FrindList items={friends} />
+      <FriendList items={friends} />
       {/* історія транзакцій */}
       <TransactionHistory items={transactions} />
     </Container>
