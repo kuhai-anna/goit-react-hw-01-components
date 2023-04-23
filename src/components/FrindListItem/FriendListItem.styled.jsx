@@ -11,7 +11,7 @@ export const FriendsItem = styled.li`
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
 
-  :not(:last-child) {
+  :not(:last-of-type) {
     margin-bottom: 8px;
   }
 `;

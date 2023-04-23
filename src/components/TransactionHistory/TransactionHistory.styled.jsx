@@ -18,7 +18,7 @@ export const TransactionThead = styled.thead`
 `;
 
 export const TransactionTr = styled.tr`
-  :nth-child(even) {
+  :nth-of-type(even) {
     background-color: #ffffff;
   }
 `;
@@ -35,7 +35,7 @@ export const TransactionBody = styled.tbody`
 export const TransactionTd = styled.td`
   padding: 8px 15px;
 
-  :first-child {
+  :first-of-type {
     text-align: left;
   }
 `;

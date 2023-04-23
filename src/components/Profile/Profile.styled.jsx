@@ -56,15 +56,15 @@ export const StatsItem = styled.li`
 
   background-color: #e7e7e7;
 
-  :first-child {
+  :first-of-type {
     border-radius: 0 0 0 4px;
   }
 
-  :last-child {
+  :last-of-type {
     border-radius: 0 0 4px 0;
   }
 
-  :not(:last-child) {
+  :not(:last-of-type) {
     border-right: 1px solid #c9c8c8;
   }
 `;
